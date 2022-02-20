@@ -1,22 +1,11 @@
 const express = require('express')
-const { route } = require('express/lib/application')
-const Router  = require('Router')
 const app = express()
+const host =  3000 
 
-const router = Router()
-
-
-app.use('/', (req, res)=>{
-  res.send('jorge')
-})
-route.get('/', (req, res)=>{
-  res.send('jorge gupao ')
+app.get('/', (req, res)=>{
+  res.send('node con express')
 })
 
 
-const listen = ()=>{
-  app.listen(3000)
-  console.log('conectado en el puerto 3000')
-}
-
-listen()
+app.listen(host)
+console.log('conectted on ', host)
